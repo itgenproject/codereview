@@ -1,8 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main() {
-  unsigned int N;
-  scanf("%u", &N);
+  int N;
+
+  scanf("%d", &N);
+  if (N <= 0) {
+    printf("n/a");
+    return;
+  }
+
 // аллоцируем память под матрицы	
   int **A = (int**)malloc(N * sizeof(int*));
   int **B = (int**)malloc(N * sizeof(int*));
